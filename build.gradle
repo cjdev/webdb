@@ -48,3 +48,7 @@ jar {
     }
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
 }
+
+task getHomeDir << {
+    println gradle.gradleHomeDir
+}

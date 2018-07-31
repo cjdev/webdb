@@ -1,5 +1,18 @@
 # Web Database
 
+## Setting up gradle
+- Setting up gradle with intellij idea
+    - brew install gradle
+    - create a build.gradle file with the following content
+        - task getHomeDir << {
+        -     println gradle.gradleHomeDir
+        - }
+    - run
+        - gradle getHomeDir
+    - you might get something like this
+        - /usr/local/Cellar/gradle/4.9/libexec
+    - use that path for your "Gradle Home" when opening a gradle project from intellij idea
+
 ## Running the application
 
     gradle jar

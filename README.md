@@ -1,35 +1,19 @@
 # Web Database
 
-## Setting up gradle
-- Setting up gradle with intellij idea
-    - brew install gradle
-    - create a build.gradle file with the following content
-        - task getHomeDir << {
-        -     println gradle.gradleHomeDir
-        - }
-    - run
-        - gradle getHomeDir
-    - you might get something like this
-        - /usr/local/Cellar/gradle/4.9/libexec
-    - use that path for your "Gradle Home" when opening a gradle project from intellij idea
-
 ## Running the application
 
-    gradle jar
-    java -jar build/libs/webdb-1.0-SNAPSHOT.jar
+    mvn clean
+    mvn verify
+    java -jar console/target/webdb.jar 8080
 
 ## Running the tests
 - still in prototyping mode, no tests yet
 
-## Deploying the application
-
-`gradle build`
-
-## Populating with test data
+## Verifying the application
 
 Run the application, then
 
-    ./test-run.sh
+    ./sample-data.sh 
 
 You should get the following output
 
@@ -71,6 +55,3 @@ You should get the following output
       "complete" : true,
       "id" : "task-5"
     } ]
-
-## How this application was created
-- did not use tooling, created everything manually starting with the build.gradle file

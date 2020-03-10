@@ -1,0 +1,58 @@
+{
+  prefix [ com cj sshubin ]
+  name
+  [
+    webdb
+  ]
+  description 'Schemaless in memory database with http api'
+  version 0.1.0
+  language kotlin
+  dependencies
+  {
+    stdlib
+    {
+      group org.jetbrains.kotlin
+      artifact kotlin-stdlib-jdk8
+    }
+    coroutines
+    {
+      group org.jetbrains.kotlinx
+      artifact kotlinx-coroutines-core
+    }
+    test
+    {
+      group org.jetbrains.kotlin
+      artifact kotlin-test-junit
+      scope test
+    }
+    ktor-server-netty
+    {
+      group    io.ktor
+      artifact ktor-server-netty
+    }
+    ktor-locations
+    {
+      group    io.ktor
+      artifact ktor-locations
+    }
+    ktor-jackson
+    {
+      group    io.ktor
+      artifact ktor-jackson
+    }
+  }
+  global
+  [
+    stdlib
+    test
+  ]
+  modules
+  {
+    console [ domain ]
+    domain  [ ktor-server-netty ktor-locations ktor-jackson ]
+  }
+  detangler [ console ]
+  consoleEntryPoint {
+    console com.cj.sshubin.webdb.console.Main
+  }
+}

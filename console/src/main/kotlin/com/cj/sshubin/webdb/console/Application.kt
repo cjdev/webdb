@@ -22,7 +22,7 @@ import io.ktor.locations.post
 import io.ktor.response.respondText
 import io.ktor.routing.routing
 import io.ktor.util.pipeline.PipelineContext
-import kotlinx.coroutines.io.ByteReadChannel
+import io.ktor.utils.io.ByteReadChannel
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 import java.nio.charset.StandardCharsets

@@ -2,9 +2,10 @@
 
 ## Running the application
 
-    mvn clean
-    mvn verify
-    java -jar console/target/webdb.jar 8080
+`./build-and.run.sh`
+
+Optionally, you can also run `./sample-data.sh`.
+Running the app blocks, you you will have to create sample data in a separate console.
 
 ## Running the tests
 - still in prototyping mode, no tests yet

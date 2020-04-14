@@ -91,7 +91,7 @@ private suspend fun PipelineContext<Unit, ApplicationCall>.respondText(body: Str
 }
 
 private suspend fun PipelineContext<Unit, ApplicationCall>.respondText(body: String, contentType: ContentType? = null, status: HttpStatusCode? = null) {
-  call.respondText(body + "\n", contentType, status)
+  call.respondText(body, contentType, status)
 }
 
 fun List<Datum>.unbox(): List<Any?> = this.map { it.content }

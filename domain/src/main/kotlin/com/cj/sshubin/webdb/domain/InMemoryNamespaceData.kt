@@ -1,5 +1,7 @@
 package com.cj.sshubin.webdb.domain
 
+import io.ktor.features.NotFoundException
+
 class InMemoryNamespaceData(private val namespace: NamespaceId) {
   private var lastIdValue: Int = 0
   private val keyOrder: MutableList<Id> = mutableListOf()
@@ -25,6 +27,9 @@ class InMemoryNamespaceData(private val namespace: NamespaceId) {
   }
 
   fun delete(id: Id) {
+    if (!keyOrder.contains(id)) {
+      throw NotFoundException("todo not found: " + id)
+    }
     keyOrder.remove(id)
     currentData.remove(id)
   }

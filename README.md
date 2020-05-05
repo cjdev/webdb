@@ -2,7 +2,7 @@
 
 ## Running the application
 
-`./build-and.run.sh`
+`./build-and-run.sh`
 
 Optionally, you can also run `./sample-data.sh`.
 Running the app blocks, you you will have to create sample data in a separate console.

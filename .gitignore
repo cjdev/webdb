@@ -1,9 +1,9 @@
-**/.idea
-**/out
+/.idea/
 **/*.iml
 **/*.ipr
 **/*.iws
-**/target
+**/out/
+**/target/
 generated
 local-config
 *~
@@ -11,3 +11,4 @@ local-config
 .#*
 .DS_Store
 dependency-reduced-pom.xml
+/cdk.out/

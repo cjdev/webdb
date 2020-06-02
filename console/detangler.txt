@@ -2,7 +2,7 @@
   reportDir console/target/detangled
   searchPaths
   [
-    ./console/target/webdb.jar
+    ./console/target/webdb-console.jar
   ]
   level 2
   startsWith

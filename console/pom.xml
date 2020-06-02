@@ -36,16 +36,16 @@
             </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.3.0</version>
                 <configuration>
-                    <finalName>webdb</finalName>
+                    <finalName>webdb-console</finalName>
                     <appendAssemblyId>false</appendAssemblyId>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.cj.sshubin.webdb.console.MainKt</mainClass>
+                            <mainClass>com.cj.sshubin.webdb.console.EntryPoint</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

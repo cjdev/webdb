@@ -53,6 +53,6 @@
   }
   detangler [ console ]
   consoleEntryPoint {
-    console com.cj.sshubin.webdb.console.Main
+    console com.cj.sshubin.webdb.console.EntryPoint
   }
 }

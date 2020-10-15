@@ -1,21 +1,8 @@
 package com.cj.sshubin.webdb.console
 
-import io.ktor.application.Application
-import io.ktor.server.engine.embeddedServer
-import io.ktor.server.netty.Netty
-
 object EntryPoint {
   @JvmStatic
   fun main(args: Array<String>) {
-    val port = getPortFromArgs(args)
-    embeddedServer(Netty, port = port, module = Application::mainModule).start(wait = true)
+    DependencyInjection(args).runner.run()
   }
-
-  private fun getPortFromArgs(args: Array<String>): Int =
-      when (args.size) {
-        0 -> 8080
-        1 -> Integer.parseInt(args[0])
-        else -> throw RuntimeException("expected exactly one argument, the port")
-      }
 }
-

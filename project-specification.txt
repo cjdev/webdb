@@ -25,20 +25,14 @@
       artifact kotlin-test-junit
       scope test
     }
-    ktor-server-netty
+    jetty-server
     {
-      group    io.ktor
-      artifact ktor-server-netty
+      group org.eclipse.jetty
+      artifact jetty-server
     }
-    ktor-locations
-    {
-      group    io.ktor
-      artifact ktor-locations
-    }
-    ktor-jackson
-    {
-      group    io.ktor
-      artifact ktor-jackson
+    jackson-module-kotlin {
+      group com.fasterxml.jackson.module
+      artifact jackson-module-kotlin
     }
   }
   global
@@ -48,8 +42,12 @@
   ]
   modules
   {
-    console [ domain ]
-    domain  [ ktor-server-netty ktor-locations ktor-jackson ]
+    console  [ domain ]
+    domain   [ coroutines jetty-server database logging ]
+    database [ json ]
+    logging  [ contract ]
+    contract []
+    json     [ jackson-module-kotlin ]
   }
   detangler [ console ]
   consoleEntryPoint {

@@ -3,25 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>webdb-domain</artifactId>
+    <artifactId>webdb-logging</artifactId>
     <dependencies>
         <dependency>
             <groupId>com.cj.sshubin.webdb</groupId>
-            <artifactId>webdb-database</artifactId>
+            <artifactId>webdb-contract</artifactId>
             <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.cj.sshubin.webdb</groupId>
-            <artifactId>webdb-logging</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.kotlinx</groupId>
-            <artifactId>kotlinx-coroutines-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-server</artifactId>
         </dependency>
     </dependencies>
     <parent>

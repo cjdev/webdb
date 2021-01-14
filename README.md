@@ -1,6 +1,9 @@
 # Web Database
 In memory database for prototyping web applications
 
+## Dependencies
+Java 11 or later (because of java.nio.file.Files.readString())
+
 ## Features
 - display namespaces
     - GET /
